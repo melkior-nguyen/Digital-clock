@@ -9,9 +9,9 @@ function getTime(){
     var second = document.querySelector('.second')
     var session = document.querySelector('.session')
 
+    hour >= 12 ? hour.innerHTML=hours - 12: hour.innerHTML='0' +hours 
     hours < 10 ? hour.innerHTML='0'+ hours: hour.innerHTML=hours
-    hours < 13 ? session.innerHTML = 'am' :session.innerHTML = 'pm'
-    hour > 12 ? hour.innerHTML=hours - 12: hour.innerHTML='0' +hours 
+    hours < 12 ? session.innerHTML = 'am' :session.innerHTML = 'pm'
     minutes < 10 ? minute.innerHTML='0'+ minutes: minute.innerHTML=minutes
     seconds < 10 ? second.innerHTML='0'+ seconds: second.innerHTML=seconds
 
