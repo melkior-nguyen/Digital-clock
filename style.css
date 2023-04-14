@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.background.mina{
+    background: linear-gradient(45deg, #ba618d, #fed9c7);
+}
+.background.sana{
+    background: linear-gradient(45deg, #013565, #00a9d0);
+}
+.background.momo{
+    background: linear-gradient(45deg, #a9a9a9, #1f3835);
+}
+.header {
+    width: 30%;
+    height: 3px;
+    margin: auto;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 5px 10px 2px #ffffff;
+}
+.mina .header{
+    border: 1px solid #ba618d;
+    background-color: #ba618d;
+}
+.sana .header{
+    border: 1px solid #fafafa;
+    background-color: #fafafa;
+}
+.momo .header{
+    border: 1px solid #194e48;
+    background-color: #194e48;
+}
+.clock {
+    margin: auto;
+    width: 800px;
+    height: 350px;
+    border-radius:10px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.mina .clock{
+    background: url('./mina/wallpaperflare.com_wallpaper\ \(1\).jpg') no-repeat  center/cover;
+    box-shadow: 0px 5px 10px 2px #ffffff;
+    border:solid 5px #ba618d;
+    animation: scale 0.2s linear;
+    transition: all 0.2s;
+}
+.sana .clock{
+    background: url('./sana/sana-twice-feel-special-pink-hair-uhdpaper.com-hd-5.676.jpg') no-repeat  top center/cover;
+    box-shadow: 0px 5px 10px 2px #ffffff;
+    border:solid 5px #fafafa;
+    animation: scale 0.2s linear;
+    transition: all 0.2s;
+}
+.momo .clock{
+    background: url('./momo/momo-twice-glasses-uhdpaper.com-hd-5.639.jpg') no-repeat  top center/cover;
+    box-shadow: 0px 5px 10px 2px #ffffff;
+    border:solid 5px #194e48;
+    animation: scale 0.2s linear;
+    transition: all 0.2s;
+}
+@keyframes scale {
+    from {
+        opacity: 0.5;
+        scale: 1.1;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.info {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    text-align: center;
+    
+    font-size: 36px;
+    z-index: 1;
+    
+}
+.mina .info{
+    color: #fff;
+    text-shadow: 0px 1px 0px  #ba618d, 0 2px 10px #ba618d;
+}
+.sana .info{
+    color: #041311;
+    text-shadow: 0px 1px 0px  #ffffff, 0 0 10px #072b9d;
+}
+.momo .info{
+    color: #0c2723;
+    text-shadow: 0px 2px 0px  #ffffff, 0 0 10px #ffffff;
+}
+.sign {
+    display: none;
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+}
+.mina .sign{
+    display: block;
+    background: url('./mina/Mina_signature.svg.png') no-repeat center;
+    background-size: contain;
+}
+.sana .sign{
+    display: block;
+    background: url('./sana/Sana_signature.svg.png') no-repeat center;
+    background-size: contain;
+    
+}
+.momo .sign{
+    display: block;
+    top: -10px;
+    background: url('./momo/Momo_signature.svg.png') no-repeat center;
+    background-size: contain;
+}
+/* btn */
+.btn {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50px;
+    height: 50px;
+
+    font-size: 14px;
+    color: #002c50;
+    background: linear-gradient(90deg, rgb(255, 255, 255), #547793);
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px #547793;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.1s ease;
+}
+.btn:active {
+    width: 46px;
+    height: 46px;
+}
+.btn::after{
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 4px solid #cccccc;
+    position: absolute;
+    z-index: -1;
+    animation: ring 1s linear infinite;
+}
+@keyframes ring {
+    0% {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+}
